@@ -1,0 +1,79 @@
+.audit-logs-page { animation: fadeInUp 0.35s ease; }
+.audit-logs-page__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-6); }
+
+.audit-logs-page__search-bar {
+  display: flex;
+  margin-bottom: var(--space-5);
+}
+
+.audit-logs-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0 14px;
+  height: 40px;
+  width: 100%;
+  max-width: 400px;
+  transition: border-color var(--transition-fast);
+}
+.audit-logs-search:focus-within { border-color: var(--color-primary); }
+.audit-logs-search input { flex: 1; border: none; outline: none; background: transparent; font-size: 0.875rem; color: var(--color-text); }
+.audit-logs-search input::placeholder { color: var(--color-text-muted); }
+.audit-logs-search svg { color: var(--color-text-muted); }
+
+.audit-table { width: 100%; border-collapse: collapse; }
+.audit-table thead tr { border-bottom: 1px solid var(--color-border); background: var(--color-bg); }
+.audit-table th {
+  padding: 12px 16px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  text-align: left;
+  white-space: nowrap;
+}
+.audit-table tbody tr {
+  border-bottom: 1px solid var(--color-border-light);
+  transition: background var(--transition-fast);
+}
+.audit-table tbody tr:last-child { border-bottom: none; }
+.audit-table tbody tr:hover { background: #F8FAFF; }
+.audit-table td { padding: 12px 16px; font-size: 0.85rem; vertical-align: middle; }
+
+.audit-id { font-family: var(--font-mono); color: var(--color-text-muted); font-size: 0.78rem; }
+.audit-user-cell { display: flex; flex-direction: column; }
+.audit-user-name { font-weight: 600; color: var(--color-text); }
+.audit-user-role { font-size: 0.72rem; color: var(--color-text-muted); margin-top: 1px; }
+
+.action-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+.action-update-diagnosis { background: #EFF6FF; color: #2563EB; }
+.action-record-observation { background: #F0FDF4; color: #16A34A; }
+.action-assign-doctor { background: #F3E8FF; color: #9333EA; }
+.action-update-vitals { background: #FEF2F2; color: #DC2626; }
+.action-add-medical-note { background: #FFF7ED; color: #EA580C; }
+.action-transfer-patient-bed { background: #ECFDF5; color: #059669; }
+.action-resolve-alert { background: #EFF6FF; color: #2563EB; }
+
+.audit-prev { color: var(--color-text-muted); text-decoration: line-through; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.audit-new { color: var(--color-text-secondary); font-weight: 500; max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.audit-time { font-size: 0.78rem; color: var(--color-text-muted); }
+
+.audit-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 60px;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}

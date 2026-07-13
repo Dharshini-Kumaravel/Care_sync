@@ -1,0 +1,125 @@
+.app-layout { display: flex; min-height: 100vh; background: var(--color-bg); }
+
+.app-layout__main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  transition: margin-left var(--transition-slow);
+  min-width: 0;
+}
+.app-layout__main--collapsed { margin-left: var(--sidebar-collapsed-width); }
+
+.app-layout__content {
+  margin-top: var(--topbar-height);
+  padding: var(--space-8);
+  min-height: calc(100vh - var(--topbar-height));
+}
+
+@media (max-width: 768px) {
+  .app-layout__main { margin-left: var(--sidebar-collapsed-width); }
+  .app-layout__content { padding: var(--space-4); }
+}
+
+/* Nurse Emergency Popup Styles */
+.modal-overlay--emergency {
+  background: rgba(230, 57, 70, 0.15) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.modal-box--emergency {
+  border: 2px solid var(--color-critical);
+  box-shadow: 0 20px 50px rgba(230, 57, 70, 0.25) !important;
+  max-width: 480px !important;
+}
+
+.emergency-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.emergency-header__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--color-critical-light);
+  color: var(--color-critical);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emergency-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-top: 4px;
+}
+
+.emergency-body {
+  padding: 24px;
+}
+
+.emergency-alert-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.emergency-patient-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed var(--color-border);
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.ep-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.ep-bed {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+}
+
+.emergency-alert-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ea-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.825rem;
+  color: var(--color-text);
+}
+
+.ea-msg {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.emergency-footer {
+  padding: 16px 24px 24px;
+}
+
+.emergency-attend-btn {
+  background: var(--color-critical) !important;
+  box-shadow: 0 4px 16px rgba(230, 57, 70, 0.3) !important;
+}
+.emergency-attend-btn:hover {
+  background: #c92f3b !important;
+  box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4) !important;
+}
+

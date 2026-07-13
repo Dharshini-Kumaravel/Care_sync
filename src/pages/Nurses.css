@@ -1,0 +1,20 @@
+.nurses-page { animation: fadeInUp 0.35s ease; }
+.nurses-page__header { margin-bottom: var(--space-6); }
+.nurses-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+.nurse-card { background: var(--color-surface); border-radius: var(--radius-lg); padding: var(--space-5); border: 1px solid var(--color-border-light); box-shadow: var(--shadow-card); transition: all var(--transition-base); }
+.nurse-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.nurse-card__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4); }
+.nurse-card__avatar { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 800; }
+.nurse-card__name { font-size: 0.9rem; font-weight: 700; color: var(--color-text); }
+.nurse-card__meta { font-size: 0.75rem; color: var(--color-text-muted); margin-top: 3px; }
+.nurse-card__divider { height: 1px; background: var(--color-border-light); margin: var(--space-4) 0; }
+.nurse-card__patients-label { font-size: 0.72rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-2); }
+.nurse-card__patient-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.nurse-card__patient-chip { display: flex; align-items: center; gap: 5px; font-size: 0.75rem; padding: 3px 9px; border-radius: var(--radius-full); background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text-secondary); }
+.nurse-card__risk-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.risk-critical { background: #EF4444; }
+.risk-high { background: #EA580C; }
+.risk-normal { background: #22C55E; }
+.nurse-card__id { font-size: 0.68rem; color: var(--color-text-muted); margin-top: var(--space-4); font-family: var(--font-mono); }
+@media (max-width: 900px) { .nurses-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .nurses-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,117 @@
+.notes-page { animation: fadeInUp 0.35s ease; }
+.notes-page__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-6); }
+
+.notes-page__filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.notes-filters-row { display: flex; gap: 8px; }
+.note-filter-btn {
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.note-filter-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.note-filter-btn--active { background: var(--color-primary-light); color: var(--color-primary); border-color: var(--color-primary); }
+
+.notes-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.clinical-note-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+}
+
+.clinical-note-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.note-type-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+}
+.note-type-prescription-notes { background: #FEE2E2; color: #DC2626; }
+.note-type-medical-notes { background: #EFF6FF; color: #2563EB; }
+.note-type-treatment-notes { background: #F0FDF4; color: #16A34A; }
+
+.note-card-date { font-size: 0.72rem; color: var(--color-text-muted); }
+
+.note-card-patient {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+.note-card-patient svg { color: var(--color-text-muted); }
+
+.note-card-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.note-card-content {
+  font-size: 0.825rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-4);
+  flex: 1;
+}
+
+.note-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--space-3);
+}
+.note-card-author { font-size: 0.72rem; color: var(--color-text-muted); }
+.note-delete {
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 4px;
+  transition: color var(--transition-fast);
+}
+.note-delete:hover { color: var(--color-critical); }
+
+.modal-form-vertical { display: flex; flex-direction: column; gap: var(--space-4); }
+
+.notes-empty {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 60px;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 1000px) { .notes-grid-layout { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .notes-grid-layout { grid-template-columns: 1fr; } }

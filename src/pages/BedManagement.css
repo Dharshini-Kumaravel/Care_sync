@@ -1,0 +1,90 @@
+.beds-page { animation: fadeInUp 0.35s ease; }
+.beds-page__header { margin-bottom: var(--space-6); }
+.beds-page__section-title { font-size: 1rem; font-weight: 700; color: var(--color-text); margin-bottom: var(--space-4); margin-top: var(--space-6); }
+
+.beds-overview {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  gap: var(--space-8);
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.beds-overview__main { flex: 1; }
+.beds-overview__big-number { font-size: 3rem; font-weight: 900; color: var(--color-text); letter-spacing: -0.05em; line-height: 1; }
+.beds-overview__big-label { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--space-4); margin-top: 4px; }
+.beds-overview__bar-wrap { margin-bottom: var(--space-3); }
+.beds-overview__bar { height: 12px; background: var(--color-border-light); border-radius: var(--radius-full); overflow: hidden; display: flex; }
+.beds-overview__bar-fill { height: 100%; transition: width 0.5s ease; }
+.beds-overview__bar-fill--occ { background: #2563EB; }
+.beds-overview__bar-fill--res { background: #F59E0B; }
+.beds-overview__legend { display: flex; gap: var(--space-4); font-size: 0.78rem; color: var(--color-text-secondary); }
+.beds-overview__legend div { display: flex; align-items: center; gap: 6px; }
+.beds-overview__legend span { width: 10px; height: 10px; border-radius: 50%; }
+
+.beds-overview__stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+.beds-overview__stat { text-align: center; padding: var(--space-4); background: var(--color-bg); border-radius: var(--radius-md); }
+.beds-overview__stat-val { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.03em; }
+.beds-overview__stat-label { font-size: 0.75rem; color: var(--color-text-muted); margin-top: 3px; }
+
+.beds-dept-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.beds-dept-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+.beds-dept-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+
+.beds-dept-card__header { display: flex; align-items: center; gap: 10px; margin-bottom: var(--space-4); }
+.beds-dept-card__icon {
+  width: 32px; height: 32px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.beds-dept-card__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); }
+.beds-dept-card__total { font-size: 0.72rem; color: var(--color-text-muted); }
+.beds-dept-card__pct { margin-left: auto; font-size: 1.1rem; font-weight: 800; }
+
+.beds-dept-card__bar { height: 6px; background: var(--color-border-light); border-radius: var(--radius-full); overflow: hidden; margin-bottom: var(--space-4); }
+.beds-dept-card__bar-fill { height: 100%; border-radius: var(--radius-full); transition: width 0.5s ease; }
+
+.beds-dept-card__stats { display: flex; justify-content: space-between; margin-bottom: var(--space-4); }
+.beds-dept-card__stat { display: flex; align-items: center; gap: 6px; font-size: 0.78rem; }
+.beds-dept-card__stat-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.beds-dept-card__stat span { color: var(--color-text-muted); }
+.beds-dept-card__stat strong { font-weight: 700; color: var(--color-text); }
+
+.beds-dept-card__bed-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 3px;
+  align-items: center;
+}
+.bed-cell {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  transition: transform var(--transition-fast);
+}
+.bed-cell:hover { transform: scale(1.3); }
+.bed-cell--occupied { background: #EF4444; }
+.bed-cell--reserved { background: #F59E0B; }
+.bed-cell--available { background: #22C55E; }
+.beds-dept-card__more { font-size: 0.65rem; color: var(--color-text-muted); grid-column: span 2; }
+
+@media (max-width: 1100px) { .beds-dept-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .beds-dept-grid { grid-template-columns: 1fr; }
+  .beds-overview { flex-direction: column; }
+  .beds-overview__stats { grid-template-columns: repeat(4, 1fr); }
+}

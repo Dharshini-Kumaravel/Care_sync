@@ -1,0 +1,72 @@
+:root {
+  /* Premium Clinical Slate Teal & Calm Seafoam Mint Theme */
+  --color-bg: #F2F6F6; 
+  --color-surface: #FFFFFF;
+  --color-primary: #1A4349; 
+  --color-primary-light: #E6EFF0;
+  --color-primary-hover: #0E292D;
+  --color-accent: #2D9396; 
+  --color-success: #3CAEA3; 
+  --color-success-light: #EBF8F7;
+  --color-warning: #F4B251; 
+  --color-warning-light: #FEF7ED;
+  --color-critical: #D95D39; 
+  --color-critical-light: #FDF1EE;
+  --color-text: #1E2D30; 
+  --color-text-secondary: #4A5D60;
+  --color-text-muted: #8EA0A3;
+  --color-border: #D3E1E2;
+  --color-border-light: #E9F0F1;
+
+  /* Sidebar */
+  --sidebar-width: 240px;
+  --sidebar-collapsed-width: 72px;
+
+  /* Topbar */
+  --topbar-height: 64px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(26, 67, 73, 0.04), 0 1px 2px rgba(26, 67, 73, 0.02);
+  --shadow-md: 0 4px 6px rgba(26, 67, 73, 0.03), 0 1px 3px rgba(26, 67, 73, 0.02);
+  --shadow-card: 0 2px 4px rgba(26, 67, 73, 0.01), 0 8px 24px rgba(26, 67, 73, 0.03);
+  --shadow-lg: 0 12px 24px rgba(26, 67, 73, 0.04), 0 4px 8px rgba(26, 67, 73, 0.02);
+  --shadow-xl: 0 24px 48px rgba(26, 67, 73, 0.06);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index */
+  --z-sidebar: 100;
+  --z-topbar: 90;
+  --z-modal: 200;
+  --z-toast: 300;
+  --z-tooltip: 400;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+}
